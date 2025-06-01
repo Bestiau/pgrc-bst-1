@@ -1,0 +1,410 @@
+[gd_scene load_steps=30 format=3 uid="uid://b2n4oo04jux0t"]
+
+[ext_resource type="Script" path="res://Mods/Scripts/ModTrack.gd" id="1_seqqr"]
+[ext_resource type="PackedScene" uid="uid://c7d7wtb3lm6hn" path="res://Mods/Placeholders/mod_car_spawn.tscn" id="2_05dne"]
+[ext_resource type="Script" path="res://Mods/Scripts/ModRaceSettings.gd" id="2_rx4va"]
+[ext_resource type="Script" path="res://Mods/Scripts/ModCarClassSetting.gd" id="3_2napl"]
+[ext_resource type="PackedScene" uid="uid://btshuvgc5p0v0" path="res://Mods/Placeholders/mod_checkpoint.tscn" id="3_7qbpy"]
+[ext_resource type="Script" path="res://Mods/Scripts/ModTrackPath.gd" id="4_h316e"]
+[ext_resource type="Material" uid="uid://budvf3w2bjk2w" path="res://Mods/Placeholders/Materials/editor/track_path.tres" id="5_6qukl"]
+[ext_resource type="PackedScene" uid="uid://cu0mwqn0aqh5x" path="res://Mods/Placeholders/mod_track_path_point.tscn" id="6_bv4sn"]
+[ext_resource type="PackedScene" uid="uid://cvsxe56hnxaa0" path="res://Mods/Placeholders/mod_trigger.tscn" id="8_nfmkb"]
+[ext_resource type="PackedScene" uid="uid://cq6m734ruksda" path="res://Mods/Placeholders/mod_barrier_arrow_block.tscn" id="9_mg822"]
+[ext_resource type="Material" uid="uid://cg3gagn54r6sm" path="res://Mods/Placeholders/Materials/metal_green.tres" id="11_4g44b"]
+[ext_resource type="Script" path="res://Mods/Scripts/ModTrackCamera.gd" id="12_oeimf"]
+[ext_resource type="PackedScene" uid="uid://dqqrq7ntnw2j8" path="res://Mods/Placeholders/mod_track_camera_previewer.tscn" id="13_fxgoo"]
+[ext_resource type="Material" uid="uid://lmwe27s32n6s" path="res://Mods/Placeholders/Materials/water.tres" id="16_mqwno"]
+[ext_resource type="Script" path="res://Mods/Scripts/ModDock.gd" id="16_rkn06"]
+[ext_resource type="PackedScene" uid="uid://nu27gmyay3un" path="res://Mods/Placeholders/mod_intro_camera.tscn" id="18_i6lae"]
+[ext_resource type="PackedScene" uid="uid://dq2fgy8jxkssy" path="res://Mods/Placeholders/mod_barrier_railing.tscn" id="19_hg5kb"]
+[ext_resource type="PackedScene" uid="uid://b80ls8gu1xpos" path="res://Mods/Placeholders/mod_spectator_car.tscn" id="20_bubvf"]
+[ext_resource type="PackedScene" uid="uid://daw7r31ckb5is" path="res://Mods/Placeholders/Models/dock.gltf" id="22_syy3l"]
+
+[sub_resource type="Resource" id="Resource_5y32m"]
+script = ExtResource("3_2napl")
+car_class = "light"
+laps = 2
+
+[sub_resource type="Resource" id="Resource_73miq"]
+script = ExtResource("3_2napl")
+car_class = "heavy"
+laps = 2
+
+[sub_resource type="Resource" id="Resource_sju77"]
+script = ExtResource("3_2napl")
+car_class = "ultra"
+laps = 3
+
+[sub_resource type="Resource" id="Resource_2hlki"]
+script = ExtResource("3_2napl")
+car_class = "cheat"
+laps = 2
+
+[sub_resource type="ImmediateMesh" id="ImmediateMesh_jjoe1"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_wss3e"]
+height = 1.5
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_jeksm"]
+material = ExtResource("11_4g44b")
+height = 1.5
+
+[sub_resource type="BoxMesh" id="BoxMesh_gc3pv"]
+size = Vector3(300, 2, 300)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_7x7qb"]
+material = ExtResource("16_mqwno")
+size = Vector2(300, 300)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_q83ku"]
+size = Vector3(11, 7, 18)
+
+[node name="Dock" type="Node3D"]
+script = ExtResource("1_seqqr")
+
+[node name="RaceSettings" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("2_rx4va")
+per_car_class_settings = Array[ExtResource("3_2napl")]([SubResource("Resource_5y32m"), SubResource("Resource_73miq"), SubResource("Resource_sju77"), SubResource("Resource_2hlki")])
+pgrc_skybox_name = "chicago"
+custom_skybox_scale = 0.8
+pgrc_music_name = "chicago"
+
+[node name="CarSpawn" parent="." instance=ExtResource("2_05dne")]
+unique_name_in_owner = true
+transform = Transform3D(-1, 0, -8.74226e-08, 0, 1, 0, 8.74226e-08, 0, -1, 170, 0.678, -89)
+
+[node name="Checkpoints" type="Node3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.5, -1, -31.5)
+
+[node name="checkpoint" parent="Checkpoints" instance=ExtResource("3_7qbpy")]
+transform = Transform3D(-1, 0, -2.62268e-07, 0, 1, 0, 2.62268e-07, 0, -1, 140, 1, -51.572)
+size = Vector2(12, 6)
+
+[node name="checkpoint2" parent="Checkpoints" instance=ExtResource("3_7qbpy")]
+transform = Transform3D(-4.01339e-07, 0, 1, 0, 1, 0, -1, 0, -4.01339e-07, 127, 1, -21)
+size = Vector2(9, 5)
+
+[node name="checkpoint3" parent="Checkpoints" instance=ExtResource("3_7qbpy")]
+transform = Transform3D(1, 0, 3.57628e-07, 0, 1, 0, -3.57628e-07, 0, 1, 74, 0.9, -25)
+size = Vector2(6, 5)
+
+[node name="checkpoint4" parent="Checkpoints" instance=ExtResource("3_7qbpy")]
+transform = Transform3D(-7.45058e-08, 0, 1, 0, 1, 0, -1, 0, -7.45058e-08, 12, 1, -17.5)
+size = Vector2(6, 5)
+
+[node name="checkpoint5" parent="Checkpoints" instance=ExtResource("3_7qbpy")]
+transform = Transform3D(1, 0, 3.07944e-08, 0, 1, 0, -3.07944e-08, 0, 1, -11.5, 1, -72)
+size = Vector2(6, 5)
+
+[node name="checkpoint6" parent="Checkpoints" instance=ExtResource("3_7qbpy")]
+transform = Transform3D(-1.2917e-08, 0, -1, 0, 1, 0, 1, 0, -1.2917e-08, 18, -1.1, -115)
+size = Vector2(5, 5)
+
+[node name="checkpoint7" parent="Checkpoints" instance=ExtResource("3_7qbpy")]
+transform = Transform3D(-1.2917e-08, 0, -1, 0, 1, 0, 1, 0, -1.2917e-08, 59.5, 0.9, -98)
+size = Vector2(9, 5)
+
+[node name="checkpoint8" parent="Checkpoints" instance=ExtResource("3_7qbpy")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 121, 0.9, -93.5)
+size = Vector2(10, 5)
+
+[node name="TrackPath" type="MeshInstance3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.5, -0.851, -31.5)
+mesh = SubResource("ImmediateMesh_jjoe1")
+script = ExtResource("4_h316e")
+material = ExtResource("5_6qukl")
+bezier_handle_length = 8.0
+track_width = 10.0
+vert_spacing = 1.0
+
+[node name="track_path_point" parent="TrackPath" instance=ExtResource("6_bv4sn")]
+transform = Transform3D(1, 0, -4.47035e-08, 0, 1, 0, 4.47035e-08, 0, 1, 133.5, 1, -57)
+
+[node name="track_path_point2" parent="TrackPath" instance=ExtResource("6_bv4sn")]
+transform = Transform3D(0.258819, 0, -0.965926, 0, 1, 0, 0.965926, 0, 0.258819, 126.5, 0.9, -25.5)
+
+[node name="track_path_point3" parent="TrackPath" instance=ExtResource("6_bv4sn")]
+transform = Transform3D(-8.9407e-08, 0, -1, 0, 1, 0, 1, 0, -8.9407e-08, 84.5, 4, 11.5)
+
+[node name="track_path_point4" parent="TrackPath" instance=ExtResource("6_bv4sn")]
+transform = Transform3D(-0.762668, 0, -0.646789, 0, 1, 0, 0.646789, 0, -0.762668, 67.5, 0.8, -56)
+
+[node name="track_path_point5" parent="TrackPath" instance=ExtResource("6_bv4sn")]
+transform = Transform3D(1.2219e-06, 0, -1, 0, 1, 0, 1, 0, 1.2219e-06, -3.5, 1, -70)
+
+[node name="track_path_point6" parent="TrackPath" instance=ExtResource("6_bv4sn")]
+transform = Transform3D(-0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, -0.707107, -23.5, -1, -130)
+
+[node name="track_path_point7" parent="TrackPath" instance=ExtResource("6_bv4sn")]
+transform = Transform3D(0.258819, 0, 0.965926, 0, 1, 0, -0.965926, 0, 0.258819, 17.5, -1, -121)
+
+[node name="track_path_point8" parent="TrackPath" instance=ExtResource("6_bv4sn")]
+transform = Transform3D(7.45058e-07, 0, 1, 0, 1, 0, -1, 0, 7.45058e-07, 45.5, -1, -98)
+
+[node name="track_path_point9" parent="TrackPath" instance=ExtResource("6_bv4sn")]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 127, 1, -85)
+
+[node name="track_path_point10" parent="TrackPath" instance=ExtResource("6_bv4sn")]
+transform = Transform3D(1, 0, -4.47035e-08, 0, 1, 0, 4.47035e-08, 0, 1, 133.5, 1, -57)
+
+[node name="Barriers" type="Node3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.5, -1, -31.5)
+
+[node name="barrier_arrow_block33" parent="Barriers" instance=ExtResource("9_mg822")]
+transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, 59.3, 1.2, -101.9)
+arrow_type = 2
+
+[node name="barrier_arrow_block32" parent="Barriers" instance=ExtResource("9_mg822")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -22, -1, -118.5)
+
+[node name="barrier_arrow_block35" parent="Barriers" instance=ExtResource("9_mg822")]
+transform = Transform3D(0.984808, 0, 0.173649, 0, 1, 0, -0.173649, 0, 0.984808, 77, 4.1, -80.8)
+arrow_type = 1
+
+[node name="barrier_arrow_block36" parent="Barriers" instance=ExtResource("9_mg822")]
+transform = Transform3D(0.906307, 0, 0.422619, 0, 1, 0, -0.422619, 0, 0.906307, 65, 4.1, -66.8)
+arrow_type = 1
+
+[node name="barrier_arrow_block34" parent="Barriers" instance=ExtResource("9_mg822")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 13.2, 1.1, -65)
+arrow_type = 1
+
+[node name="barrier_arrow_block24" parent="Barriers" instance=ExtResource("9_mg822")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 60, 4, 16)
+
+[node name="barrier_arrow_block25" parent="Barriers" instance=ExtResource("9_mg822")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 60, 4, 11.5)
+
+[node name="barrier_arrow_block26" parent="Barriers" instance=ExtResource("9_mg822")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 60, 4, 7)
+
+[node name="barrier_railing12" parent="Barriers" instance=ExtResource("19_hg5kb")]
+transform = Transform3D(-1, 0, 2.98023e-07, 0, 1, 0, -2.98023e-07, 0, -1, 4.5, -1, -96.5)
+
+[node name="barrier_railing13" parent="Barriers" instance=ExtResource("19_hg5kb")]
+transform = Transform3D(-2.54312e-07, 0, -1, 0, 1, 0, 1, 0, -2.54312e-07, -16.5, -1, -118.319)
+
+[node name="barrier_railing14" parent="Barriers" instance=ExtResource("19_hg5kb")]
+transform = Transform3D(-2.54312e-07, 0, -1, 0, 1, 0, 1, 0, -2.54312e-07, -27.5, -1, -118.319)
+
+[node name="barrier_barrel" type="RigidBody3D" parent="Barriers"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.3, 1.1, -56.7)
+collision_mask = 7
+mass = 20.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Barriers/barrier_barrel"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 0)
+shape = SubResource("CylinderShape3D_wss3e")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Barriers/barrier_barrel/CollisionShape3D"]
+mesh = SubResource("CylinderMesh_jeksm")
+
+[node name="barrier_barrel2" type="RigidBody3D" parent="Barriers"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32, 1.1, -57.9)
+collision_mask = 7
+mass = 20.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Barriers/barrier_barrel2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 0)
+shape = SubResource("CylinderShape3D_wss3e")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Barriers/barrier_barrel2/CollisionShape3D"]
+mesh = SubResource("CylinderMesh_jeksm")
+
+[node name="barrier_barrel3" type="RigidBody3D" parent="Barriers"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.7, 1.1, -56.7)
+collision_mask = 7
+mass = 20.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Barriers/barrier_barrel3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 0)
+shape = SubResource("CylinderShape3D_wss3e")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Barriers/barrier_barrel3/CollisionShape3D"]
+mesh = SubResource("CylinderMesh_jeksm")
+
+[node name="SpectatorCars" type="Node3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.5, 0.127, -31.5)
+
+[node name="spectator_car" parent="SpectatorCars" instance=ExtResource("20_bubvf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.5, -1.8, -90.9)
+
+[node name="spectator_car2" parent="SpectatorCars" instance=ExtResource("20_bubvf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.8, -1.8, -90.9)
+
+[node name="spectator_car3" parent="SpectatorCars" instance=ExtResource("20_bubvf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, -1.8, -90.9)
+
+[node name="spectator_car4" parent="SpectatorCars" instance=ExtResource("20_bubvf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.8, -1.8, -90.9)
+
+[node name="spectator_car5" parent="SpectatorCars" instance=ExtResource("20_bubvf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2, -1.8, -90.9)
+
+[node name="spectator_car6" parent="SpectatorCars" instance=ExtResource("20_bubvf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.499996, -1.8, -90.9)
+
+[node name="spectator_car7" parent="SpectatorCars" instance=ExtResource("20_bubvf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.2, -1.8, -90.9)
+
+[node name="spectator_car8" parent="SpectatorCars" instance=ExtResource("20_bubvf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.8, -1.8, -90.9)
+
+[node name="spectator_car9" parent="SpectatorCars" instance=ExtResource("20_bubvf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.2, -1.8, -90.9)
+
+[node name="spectator_car10" parent="SpectatorCars" instance=ExtResource("20_bubvf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.2, -1.8, -102.2)
+
+[node name="spectator_car11" parent="SpectatorCars" instance=ExtResource("20_bubvf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.5, -1.8, -102.2)
+
+[node name="spectator_car12" parent="SpectatorCars" instance=ExtResource("20_bubvf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.8, -1.8, -102.2)
+
+[node name="spectator_car13" parent="SpectatorCars" instance=ExtResource("20_bubvf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, -1.8, -102.2)
+
+[node name="spectator_car14" parent="SpectatorCars" instance=ExtResource("20_bubvf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.8, -1.8, -102.2)
+
+[node name="spectator_car15" parent="SpectatorCars" instance=ExtResource("20_bubvf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.5, -1.8, -102.2)
+
+[node name="spectator_car16" parent="SpectatorCars" instance=ExtResource("20_bubvf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.2, -1.8, -102.2)
+
+[node name="spectator_car17" parent="SpectatorCars" instance=ExtResource("20_bubvf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.5, -1.8, -106.8)
+
+[node name="spectator_car18" parent="SpectatorCars" instance=ExtResource("20_bubvf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.8, -1.8, -106.8)
+
+[node name="spectator_car19" parent="SpectatorCars" instance=ExtResource("20_bubvf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, -1.8, -106.8)
+
+[node name="spectator_car20" parent="SpectatorCars" instance=ExtResource("20_bubvf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.8, -1.8, -118.2)
+
+[node name="spectator_car21" parent="SpectatorCars" instance=ExtResource("20_bubvf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.499996, -1.8, -118.2)
+
+[node name="spectator_car22" parent="SpectatorCars" instance=ExtResource("20_bubvf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.8, -1.8, -106.8)
+
+[node name="spectator_car23" parent="SpectatorCars" instance=ExtResource("20_bubvf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.5, -1.8, -106.8)
+
+[node name="spectator_car24" parent="SpectatorCars" instance=ExtResource("20_bubvf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.2, -1.8, -118.2)
+
+[node name="spectator_car25" parent="SpectatorCars" instance=ExtResource("20_bubvf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.2, -1.8, -106.8)
+
+[node name="spectator_car26" parent="SpectatorCars" instance=ExtResource("20_bubvf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.5, -1.8, -118.2)
+
+[node name="spectator_car27" parent="SpectatorCars" instance=ExtResource("20_bubvf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.8, -1.8, -118.2)
+
+[node name="spectator_car28" parent="SpectatorCars" instance=ExtResource("20_bubvf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.2, -1.8, -106.8)
+
+[node name="spectator_car29" parent="SpectatorCars" instance=ExtResource("20_bubvf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2, -1.8, -118.2)
+
+[node name="spectator_car30" parent="SpectatorCars" instance=ExtResource("20_bubvf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.8, -1.8, -118.2)
+
+[node name="spectator_car31" parent="SpectatorCars" instance=ExtResource("20_bubvf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.5, -1.8, -118.2)
+
+[node name="spectator_car32" parent="SpectatorCars" instance=ExtResource("20_bubvf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.2, -1.8, -106.8)
+
+[node name="OutOfBounds" type="Node3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.5, -1, -31.5)
+
+[node name="trigger" parent="OutOfBounds" instance=ExtResource("8_nfmkb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, -5, -54)
+mesh = SubResource("BoxMesh_gc3pv")
+size = Vector3(300, 2, 300)
+
+[node name="TrackModels" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, -1, -105)
+
+[node name="water" type="MeshInstance3D" parent="TrackModels"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 92, -10, 30)
+cast_shadow = 0
+mesh = SubResource("PlaneMesh_7x7qb")
+skeleton = NodePath("")
+
+[node name="dock" parent="TrackModels" instance=ExtResource("22_syy3l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 1, 105)
+script = ExtResource("16_rkn06")
+
+[node name="container-long-green" parent="TrackModels/dock" index="94"]
+transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 105.1, 15.9, -103)
+
+[node name="TrackCameras" type="Node3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.5, -1, -31.5)
+
+[node name="track_camera" type="Node3D" parent="TrackCameras"]
+transform = Transform3D(-0.801231, -0.247699, 0.544679, 0, 0.910292, 0.413966, -0.598356, 0.331682, -0.729354, 143.494, 31.6488, -59.6425)
+script = ExtResource("12_oeimf")
+dist_zoom_factor = 0.5
+
+[node name="track_camera2" type="Node3D" parent="TrackCameras"]
+transform = Transform3D(0.801231, 0.247699, -0.544679, 0, 0.910292, 0.413966, 0.598356, -0.331682, 0.729354, 55.8093, 22.3744, -3.42801)
+script = ExtResource("12_oeimf")
+base_dist = 16.0
+dist_zoom_factor = 0.8
+starting_track_interp = 0.08
+
+[node name="track_camera3" type="Node3D" parent="TrackCameras"]
+transform = Transform3D(0.801231, 0.247699, -0.544679, 0, 0.910292, 0.413966, 0.598356, -0.331682, 0.729354, 63.8093, 22.3744, -102.428)
+script = ExtResource("12_oeimf")
+base_dist = 16.0
+dist_zoom_factor = 0.8
+starting_track_interp = 0.385
+
+[node name="TrackCameraPreviewer" parent="." instance=ExtResource("13_fxgoo")]
+unique_name_in_owner = true
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 170.037, 0, -96.5716)
+
+[node name="IntroCamera" parent="." instance=ExtResource("18_i6lae")]
+unique_name_in_owner = true
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 179.837, -1, -80.0716)
+
+[node name="CameraPath" parent="IntroCamera" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 1, 8)
+
+[node name="LookPath" parent="IntroCamera" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 1, 8)
+
+[node name="cam" parent="IntroCamera" index="2"]
+transform = Transform3D(0.152057, 0.464346, -0.872503, 0, 0.882768, 0.469809, 0.988372, -0.0714378, 0.134231, 25.837, 10, 33.9284)
+
+[node name="look" parent="IntroCamera" index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.837, 3, 31.9284)
+
+[node name="AnimTrigger" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 112, 5, -39)
+collision_layer = 8
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AnimTrigger"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.5, -9)
+shape = SubResource("BoxShape3D_q83ku")
+
+[connection signal="body_entered" from="AnimTrigger" to="TrackModels/dock" method="_on_anim_trigger_body_entered"]
+
+[editable path="TrackModels/dock"]
+[editable path="IntroCamera"]

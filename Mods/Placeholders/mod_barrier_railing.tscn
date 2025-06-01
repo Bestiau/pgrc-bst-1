@@ -10,18 +10,23 @@
 [node name="barrier_railing" type="Node3D"]
 transform = Transform3D(-0.5, 0, -0.866025, 0, 1, 0, 0.866025, 0, -0.5, 8.91362, 0, -9.84886)
 script = ExtResource("1_wuk3c")
+railing_type = 0
 
 [node name="railing-barrier-yellow" parent="." instance=ExtResource("1_uixxq")]
 unique_name_in_owner = true
 
 [node name="railing-barrier-banner-1" parent="." instance=ExtResource("2_1drgv")]
 unique_name_in_owner = true
+visible = false
 
 [node name="railing-barrier-banner-2" parent="." instance=ExtResource("3_jvxvj")]
 unique_name_in_owner = true
+visible = false
 
 [node name="railing-barrier-banner-3" parent="." instance=ExtResource("5_r56k2")]
 unique_name_in_owner = true
+visible = false
 
 [node name="railing-barrier-banner-4" parent="." instance=ExtResource("6_nlqfp")]
 unique_name_in_owner = true
+visible = false

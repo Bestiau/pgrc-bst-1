@@ -1,9 +1,9 @@
 [gd_scene load_steps=9 format=3 uid="uid://btshuvgc5p0v0"]
 
 [ext_resource type="Script" path="res://Mods/Scripts/ModCheckpoint.gd" id="1_0rfyc"]
-[ext_resource type="Material" uid="uid://dqsprltnt445e" path="res://Mods/Placeholders/Materials/blue.tres" id="2_m15us"]
-[ext_resource type="Material" uid="uid://ckwfhjdf4ro8e" path="res://Mods/Placeholders/Materials/red.tres" id="3_ffaqe"]
-[ext_resource type="Material" uid="uid://kdw7get8yfj7" path="res://Mods/Placeholders/Materials/trigger.tres" id="3_fk317"]
+[ext_resource type="Material" uid="uid://dqsprltnt445e" path="res://Mods/Placeholders/Materials/editor/blue.tres" id="2_m15us"]
+[ext_resource type="Material" uid="uid://ckwfhjdf4ro8e" path="res://Mods/Placeholders/Materials/editor/red.tres" id="3_ffaqe"]
+[ext_resource type="Material" uid="uid://kdw7get8yfj7" path="res://Mods/Placeholders/Materials/editor/trigger.tres" id="3_fk317"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_6l02e"]
 height = 3.0

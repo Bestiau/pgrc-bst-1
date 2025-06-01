@@ -10,7 +10,8 @@ config_version=5
 
 [application]
 
-config/name="mod_track_test"
+config/name="bestiau_dock"
+run/main_scene="res://Mods/bestiau_dock/Tracks/dock/dock.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
 
 [layer_names]
@@ -40,17 +41,14 @@ config/features=PackedStringArray("4.2", "Mobile")
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="mobile"
 
 [shader_globals]
 
 LIGHT_DIR={
 "type": "vec3",
-"value": Vector3(0, -1, 0)
-}
-CULL_DIST_BIAS={
-"type": "float",
-"value": 0.0
+"value": Vector3(0.095, -0.375, 0.125)
 }
 OVERALL_GAMMA={
 "type": "float",
@@ -64,11 +62,15 @@ CULL_DIST_FAR={
 "type": "vec2",
 "value": Vector2(50, 70)
 }
-JITTER={
-"type": "float",
-"value": 0.667
-}
 JITTER_RESOLUTION={
 "type": "vec2",
 "value": Vector2(320, 240)
+}
+CULL_DIST_BIAS={
+"type": "float",
+"value": 80.0
+}
+JITTER={
+"type": "float",
+"value": 0.0
 }

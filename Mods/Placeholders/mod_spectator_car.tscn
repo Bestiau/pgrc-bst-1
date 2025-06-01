@@ -1,8 +1,8 @@
 [gd_scene load_steps=8 format=3 uid="uid://b80ls8gu1xpos"]
 
 [ext_resource type="PackedScene" uid="uid://udvcnvjy6jlm" path="res://Mods/Placeholders/Models/spectator_car_proxy.glb" id="1_pma2q"]
-[ext_resource type="Material" uid="uid://r1tcebah6e8c" path="res://Mods/Placeholders/Materials/light_green.tres" id="2_3wxkj"]
-[ext_resource type="Material" uid="uid://ruyy0xhg7hl5" path="res://Mods/Placeholders/Materials/collider_ref.tres" id="3_pwcax"]
+[ext_resource type="Material" uid="uid://r1tcebah6e8c" path="res://Mods/Placeholders/Materials/editor/light_green.tres" id="2_3wxkj"]
+[ext_resource type="Material" uid="uid://ruyy0xhg7hl5" path="res://Mods/Placeholders/Materials/editor/collider_ref.tres" id="3_pwcax"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6tv1d"]
 vertex_color_use_as_albedo = true

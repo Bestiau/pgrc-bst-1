@@ -14,6 +14,8 @@ unique_name_in_owner = true
 
 [node name="arrow-barrier-two-way" parent="." instance=ExtResource("3_7eca2")]
 unique_name_in_owner = true
+visible = false
 
 [node name="arrow-barrier-two-way-reversed" parent="." instance=ExtResource("4_pj18q")]
 unique_name_in_owner = true
+visible = false
