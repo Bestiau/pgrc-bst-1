@@ -14,6 +14,14 @@ config/name="bestiau_dock"
 run/main_scene="res://Mods/bestiau_dock/Tracks/dock/dock.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
 
+[importer_defaults]
+
+scene={
+"meshes/force_disable_compression": true,
+"meshes/generate_lods": false,
+"meshes/light_baking": 0
+}
+
 [layer_names]
 
 3d_render/layer_1="Ground"
@@ -46,31 +54,31 @@ renderer/rendering_method="mobile"
 
 [shader_globals]
 
-LIGHT_DIR={
-"type": "vec3",
-"value": Vector3(0.095, -0.375, 0.125)
-}
 OVERALL_GAMMA={
 "type": "float",
-"value": 1.0
+"value": 0.84
 }
 CULL_DIST_NEAR={
 "type": "vec2",
-"value": Vector2(25, 40)
+"value": Vector2(25, 80)
 }
 CULL_DIST_FAR={
 "type": "vec2",
-"value": Vector2(50, 70)
+"value": Vector2(60, 80)
 }
 JITTER_RESOLUTION={
 "type": "vec2",
 "value": Vector2(320, 240)
 }
-CULL_DIST_BIAS={
-"type": "float",
-"value": 80.0
-}
 JITTER={
+"type": "float",
+"value": 0.0
+}
+LIGHT_DIR={
+"type": "vec3",
+"value": Vector3(-1, -1, -1)
+}
+CULL_DIST_BIAS={
 "type": "float",
 "value": 0.0
 }
