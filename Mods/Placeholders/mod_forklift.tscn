@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://2d8pl77r0j3d"]
+
+[ext_resource type="Script" path="res://Mods/Scripts/Track/BasicTrackRigidBody.gd" id="1_15rau"]
+[ext_resource type="PackedScene" uid="uid://qljermfmxmrn" path="res://Mods/Placeholders/Models/forklift.gltf" id="2_qijl3"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hk5rs"]
+size = Vector3(1.6, 2.4, 2.3)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_heduw"]
+size = Vector3(0.9, 0.1, 1.6)
+
+[node name="forklift" type="RigidBody3D" groups=["recordable"]]
+collision_layer = 3
+collision_mask = 7
+mass = 180.0
+script = ExtResource("1_15rau")
+
+[node name="cab-shape" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.9407e-08, 1.35, -0.15)
+shape = SubResource("BoxShape3D_hk5rs")
+
+[node name="forklift-model" parent="." instance=ExtResource("2_qijl3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.15, 0)
+
+[node name="fork-shape" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0161133, 0.65, 1.80781)
+shape = SubResource("BoxShape3D_heduw")

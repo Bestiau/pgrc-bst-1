@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://bfklfqhumlvkx"]
+
+[ext_resource type="Script" path="res://Mods/Scripts/Track/BasicTrackRigidBody.gd" id="1_00o0k"]
+[ext_resource type="PackedScene" uid="uid://6nepkki2lltv" path="res://Mods/Placeholders/Models/palette.gltf" id="2_8whxp"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_aec8j"]
+size = Vector3(2.8, 0.3, 2.8)
+
+[node name="palette" type="RigidBody3D" groups=["recordable"]]
+collision_layer = 3
+collision_mask = 7
+mass = 30.0
+script = ExtResource("1_00o0k")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.15, 0)
+shape = SubResource("BoxShape3D_aec8j")
+
+[node name="palette3" parent="CollisionShape3D" instance=ExtResource("2_8whxp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4, -0.15, 1.4)

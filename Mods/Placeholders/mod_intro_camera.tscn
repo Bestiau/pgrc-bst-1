@@ -12,14 +12,14 @@ point_count = 2
 
 [sub_resource type="Curve3D" id="Curve3D_2cfli"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 16.7955, 11.5806, 14.9923, 3.46274, 0.859375, 1.82533, -3.46274, -0.859375, -1.82533, 7.36636, 6.43004, 0.851803, 0, 0, 0, 0, 0, 0, 0.117383, 5.08643, -1.26455),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 2, 8, 26, 1, -1, 4, -1, 1, -4, 1, 6, 13, 0, 0, 0, 0, 0, 0, 0.117383, 5.08643, -1.26455),
 "tilts": PackedFloat32Array(0, 0.00109135, 0)
 }
 point_count = 3
 
 [sub_resource type="Curve3D" id="Curve3D_f14xr"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0.738639, 3.04589, -3.91534, 0, 0, 0, 0, 0, 0, -7.93812, 0.825484, -2.68124),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 48, 7, -4, 0, 0, 0, 0, 0, 0, -7.93812, 0.825484, -2.68124),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
@@ -39,8 +39,8 @@ curve = SubResource("Curve3D_f14xr")
 
 [node name="cam" type="Camera3D" parent="."]
 unique_name_in_owner = true
-transform = Transform3D(0.76223, -0.210597, 0.61209, 0, 0.945596, 0.325344, -0.647306, -0.247987, 0.720762, 16.7955, 11.5806, 14.9923)
+transform = Transform3D(0.546268, 0.0152495, -0.837472, 0, 0.999834, 0.0182059, 0.837611, -0.0099453, 0.546177, 2, 8, 26)
 
 [node name="look" type="Marker3D" parent="."]
 unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.738639, 3.04589, -3.91534)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48, 7, -4)

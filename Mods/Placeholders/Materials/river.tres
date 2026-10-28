@@ -1,0 +1,14 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://nasm42w6ppjh"]
+
+[ext_resource type="Shader" path="res://Shaders/saturn_lit_world_water.gdshader" id="1_smfcl"]
+[ext_resource type="Texture2D" uid="uid://d3uuuepbt4bd4" path="res://Mods/Placeholders/Textures/water.png" id="2_cell5"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_smfcl")
+shader_parameter/affine_mapping = false
+shader_parameter/affine_effect_reduction = 1.0
+shader_parameter/albedo_color = Color(0.646029, 0.646029, 0.646029, 1)
+shader_parameter/scroll_speed = Vector2(0, -0.6)
+shader_parameter/uv_scale = 0.11
+shader_parameter/main_texture = ExtResource("2_cell5")
