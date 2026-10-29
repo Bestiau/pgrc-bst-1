@@ -16,3 +16,6 @@ func _process(delta):
 	print("Intro ended:", mod_globals.intro_ended)
 	if (mod_globals.intro_ended):
 		progress += progressByFrame * delta
+
+func setup_replay(mgr:ReplayManager):
+	mgr.add_transform(self)

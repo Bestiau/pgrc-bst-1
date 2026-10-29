@@ -59,25 +59,25 @@ _data = {
 }
 point_count = 10
 
-[sub_resource type="BoxMesh" id="BoxMesh_glbrm"]
+[sub_resource type="BoxMesh" id="BoxMesh_rug5n"]
 size = Vector3(600, 2, 600)
 
-[sub_resource type="BoxMesh" id="BoxMesh_y330i"]
+[sub_resource type="BoxMesh" id="BoxMesh_x7q0h"]
 size = Vector3(55, 100, 230)
 
-[sub_resource type="BoxMesh" id="BoxMesh_b7dkq"]
+[sub_resource type="BoxMesh" id="BoxMesh_vilcf"]
 size = Vector3(54, 100, 150)
 
-[sub_resource type="BoxMesh" id="BoxMesh_bu73r"]
+[sub_resource type="BoxMesh" id="BoxMesh_cse13"]
 size = Vector3(55, 100, 320)
 
-[sub_resource type="BoxMesh" id="BoxMesh_o7in2"]
+[sub_resource type="BoxMesh" id="BoxMesh_voi5x"]
 size = Vector3(250, 100, 150)
 
-[sub_resource type="BoxMesh" id="BoxMesh_l817g"]
+[sub_resource type="BoxMesh" id="BoxMesh_xp478"]
 size = Vector3(300, 100, 150)
 
-[sub_resource type="ImmediateMesh" id="ImmediateMesh_oqm64"]
+[sub_resource type="ImmediateMesh" id="ImmediateMesh_8v8m2"]
 
 [sub_resource type="Curve" id="Curve_lm6xc"]
 _data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
@@ -730,11 +730,12 @@ transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, 
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 202, 1.5, 1.5)
 curve = SubResource("Curve3D_ln35f")
 
-[node name="PathFollow3D" type="PathFollow3D" parent="Path3D2"]
+[node name="PathFollow3D" type="PathFollow3D" parent="Path3D2" groups=["recordable"]]
 transform = Transform3D(0.999627, 0, 0.0267757, 0, 0.999996, 0, -0.0267757, 0, 0.999626, 0, 0, 0)
 tilt_enabled = false
 script = ExtResource("12_ql6r4")
 startProgress = 99.0
+progressByFrame = null
 
 [node name="forklift2" parent="Path3D2/PathFollow3D" instance=ExtResource("7_8os2f")]
 transform = Transform3D(-1, 0, -8.75443e-08, 0, 1, 0, 8.75443e-08, 0, -1, 0, -1.6, 0)
@@ -743,10 +744,12 @@ transform = Transform3D(-1, 0, -8.75443e-08, 0, 1, 0, 8.75443e-08, 0, -1, 0, -1.
 transform = Transform3D(1.49012e-07, 0, 1, 0, 1, 0, -1, 0, 1.49012e-07, -2.2976, 1.1, -75.4)
 curve = SubResource("Curve3D_2a4hm")
 
-[node name="PathFollow3D" type="PathFollow3D" parent="Path3D"]
+[node name="PathFollow3D" type="PathFollow3D" parent="Path3D" groups=["recordable"]]
 transform = Transform3D(-4.37102e-08, 0, -0.999972, 0, 0.999981, 0, 0.999973, 0, -4.37102e-08, -13.6, -0.1, 0.0976019)
 tilt_enabled = false
 script = ExtResource("12_ql6r4")
+startProgress = null
+progressByFrame = null
 
 [node name="forklift" parent="Path3D/PathFollow3D" instance=ExtResource("7_8os2f")]
 transform = Transform3D(-1, 0, -8.74233e-08, 0, 1, 0, 8.74232e-08, 0, -1, 0.00239825, -1.2, -0.200043)
@@ -980,32 +983,32 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.5, -1, -31.5)
 
 [node name="trigger" parent="OutOfBounds" instance=ExtResource("8_nfmkb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 61, -5, -54)
-mesh = SubResource("BoxMesh_glbrm")
+mesh = SubResource("BoxMesh_rug5n")
 size = Vector3(600, 2, 600)
 
 [node name="trigger2" parent="OutOfBounds" instance=ExtResource("8_nfmkb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -80, 37, -154)
-mesh = SubResource("BoxMesh_y330i")
+mesh = SubResource("BoxMesh_x7q0h")
 size = Vector3(55, 100, 230)
 
 [node name="trigger3" parent="OutOfBounds" instance=ExtResource("8_nfmkb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -57, 37, 35)
-mesh = SubResource("BoxMesh_b7dkq")
+mesh = SubResource("BoxMesh_vilcf")
 size = Vector3(54, 100, 150)
 
 [node name="trigger6" parent="OutOfBounds" instance=ExtResource("8_nfmkb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 237, 37, -101)
-mesh = SubResource("BoxMesh_bu73r")
+mesh = SubResource("BoxMesh_cse13")
 size = Vector3(55, 100, 320)
 
 [node name="trigger4" parent="OutOfBounds" instance=ExtResource("8_nfmkb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 90, 37, 130)
-mesh = SubResource("BoxMesh_o7in2")
+mesh = SubResource("BoxMesh_voi5x")
 size = Vector3(250, 100, 150)
 
 [node name="trigger5" parent="OutOfBounds" instance=ExtResource("8_nfmkb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 80, 37, -335)
-mesh = SubResource("BoxMesh_l817g")
+mesh = SubResource("BoxMesh_xp478")
 size = Vector3(300, 100, 150)
 
 [node name="track_main" parent="." instance=ExtResource("18_5tw40")]
@@ -1015,7 +1018,7 @@ script = ExtResource("19_aqi5n")
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.5, -0.851, -31.5)
 visible = false
-mesh = SubResource("ImmediateMesh_oqm64")
+mesh = SubResource("ImmediateMesh_8v8m2")
 script = ExtResource("4_h316e")
 material = ExtResource("5_6qukl")
 bezier_handle_length = 30.0

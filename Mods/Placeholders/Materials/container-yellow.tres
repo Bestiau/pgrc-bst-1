@@ -6,7 +6,7 @@
 [resource]
 render_priority = 0
 shader = ExtResource("1_atal0")
-shader_parameter/affine_mapping = true
+shader_parameter/affine_mapping = false
 shader_parameter/affine_effect_reduction = 1.0
 shader_parameter/albedo_color = Color(0.851402, 0.671127, 0.379039, 1)
 shader_parameter/uv_min = Vector2(-999, -999)
