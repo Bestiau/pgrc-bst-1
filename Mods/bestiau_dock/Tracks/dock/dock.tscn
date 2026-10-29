@@ -54,30 +54,30 @@ point_count = 6
 
 [sub_resource type="Curve3D" id="Curve3D_2a4hm"]
 _data = {
-"points": PackedVector3Array(-12, 0, -2, 20, 0, 0, -8, 0, 0, 0, 0, -6, 0, 0, 4, 14.6, -0.1, 4.29758, 4, 0, 0, -3.10161, 0, 0, 12.3, -0.0999999, 27.8976, 3.5, 0, 0, -3.5, 0, 0, 4.6, 1, 28.298, 0, 0, -8, 0, 0, 4.1, -16.4, 0.9, 34.2976, 0, 0, -2.5, 0, 0, 2.5, -16.7, 0.9, 41.8976, 0, 0, -2.5, 0, 0, 5, -16.8, -0.0999999, 49.3976, 6.4, 0, -0.1, -6.4, 0, 0.1, -23.687, 0, 58.677, 0.1, 0, 6.4, -0.1, 0, -6.4, -39.503, 0, 50.576, 0, 0, 0, 0, 0, 0, -39.4, -0.0999999, 38.2976),
+"points": PackedVector3Array(-12, 0, -2, 20, 0, 0, -13.6, -0.1, 0.0976019, 0, 0, -6, 0, 0, 4, 14.6, -0.1, 4.29758, 4, 0, 0, -3.10161, 0, 0, 12.3, -0.0999999, 27.8976, 3.5, 0, 0, -3.5, 0, 0, 4.6, 1, 28.298, 0, 0, -8, 0, 0, 4.1, -16.4, 0.9, 34.2976, 0, 0, -2.5, 0, 0, 2.5, -16.7, 0.9, 41.8976, 0, 0, -2.5, 0, 0, 5, -16.8, -0.0999999, 49.3976, 6.4, 0, -0.1, -6.4, 0, 0.1, -23.687, 0, 58.677, 0.1, 0, 6.4, -0.1, 0, -6.4, -39.503, 0, 50.576, 0, 0, 0, 0, 0, 0, -39.4, -0.0999999, 38.2976),
 "tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
 }
 point_count = 10
 
-[sub_resource type="BoxMesh" id="BoxMesh_rkl02"]
+[sub_resource type="BoxMesh" id="BoxMesh_glbrm"]
 size = Vector3(600, 2, 600)
 
-[sub_resource type="BoxMesh" id="BoxMesh_ll1h8"]
+[sub_resource type="BoxMesh" id="BoxMesh_y330i"]
 size = Vector3(55, 100, 230)
 
-[sub_resource type="BoxMesh" id="BoxMesh_jktnm"]
+[sub_resource type="BoxMesh" id="BoxMesh_b7dkq"]
 size = Vector3(54, 100, 150)
 
-[sub_resource type="BoxMesh" id="BoxMesh_0cdb4"]
+[sub_resource type="BoxMesh" id="BoxMesh_bu73r"]
 size = Vector3(55, 100, 320)
 
-[sub_resource type="BoxMesh" id="BoxMesh_k6sm1"]
+[sub_resource type="BoxMesh" id="BoxMesh_o7in2"]
 size = Vector3(250, 100, 150)
 
-[sub_resource type="BoxMesh" id="BoxMesh_bejex"]
+[sub_resource type="BoxMesh" id="BoxMesh_l817g"]
 size = Vector3(300, 100, 150)
 
-[sub_resource type="ImmediateMesh" id="ImmediateMesh_xm8jb"]
+[sub_resource type="ImmediateMesh" id="ImmediateMesh_oqm64"]
 
 [sub_resource type="Curve" id="Curve_lm6xc"]
 _data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
@@ -130,27 +130,27 @@ unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.5, -1, -31.5)
 
 [node name="checkpoint" parent="Checkpoints" instance=ExtResource("3_7qbpy")]
-transform = Transform3D(-1, 0, -2.62268e-07, 0, 1, 0, 2.62268e-07, 0, -1, 175, 1, -30.572)
+transform = Transform3D(-1, 0, -2.62268e-07, 0, 1, 0, 2.62268e-07, 0, -1, 175, 1.1, -30.572)
 size = Vector2(14, 6)
 
 [node name="checkpoint2" parent="Checkpoints" instance=ExtResource("3_7qbpy")]
-transform = Transform3D(0.258819, 0, 0.965926, 0, 1, 0, -0.965926, 0, 0.258819, 75.8, 1, -39)
+transform = Transform3D(0.258819, 0, 0.965926, 0, 1, 0, -0.965926, 0, 0.258819, 75.8, 1.2, -39)
 size = Vector2(12, 6)
 
 [node name="checkpoint3" parent="Checkpoints" instance=ExtResource("3_7qbpy")]
-transform = Transform3D(-7.45058e-08, 0, 1, 0, 1, 0, -1, 0, -7.45058e-08, 12, 1, -25.5)
+transform = Transform3D(-7.45058e-08, 0, 1, 0, 1, 0, -1, 0, -7.45058e-08, 12, 1.1, -25.5)
 size = Vector2(6, 7)
 
 [node name="checkpoint4" parent="Checkpoints" instance=ExtResource("3_7qbpy")]
-transform = Transform3D(1, 0, 3.07944e-08, 0, 1, 0, -3.07944e-08, 0, 1, -12.5, 1, -72.5)
+transform = Transform3D(1, 0, 3.07944e-08, 0, 1, 0, -3.07944e-08, 0, 1, -12.5, 1.1, -72.5)
 size = Vector2(16, 8)
 
 [node name="checkpoint5" parent="Checkpoints" instance=ExtResource("3_7qbpy")]
-transform = Transform3D(-1.2917e-08, 0, -1, 0, 1, 0, 1, 0, -1.2917e-08, 45.5, -1.1, -100.5)
+transform = Transform3D(-1.2917e-08, 0, -1, 0, 1, 0, 1, 0, -1.2917e-08, 44.4, -0.9, -100.5)
 size = Vector2(10, 5)
 
 [node name="checkpoint6" parent="Checkpoints" instance=ExtResource("3_7qbpy")]
-transform = Transform3D(0.173648, 0, -0.984808, 0, 1, 0, 0.984808, 0, 0.173648, 105, 1.1, -89)
+transform = Transform3D(0.173648, 0, -0.984808, 0, 1, 0, 0.984808, 0, 0.173648, 105, 1.2, -89)
 size = Vector2(10, 5)
 
 [node name="Barriers" type="Node3D" parent="."]
@@ -724,7 +724,7 @@ transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 198, 0.1, -44.7)
 transform = Transform3D(1, 0, 1.31134e-07, 0, 1, 0, -1.31134e-07, 0, 1, 210.5, 0.1, -104.7)
 
 [node name="forklift3" parent="." instance=ExtResource("7_8os2f")]
-transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 62.5, 0.1, -81.7)
+transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, 62.5, 0.1, -73.7)
 
 [node name="Path3D2" type="Path3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 202, 1.5, 1.5)
@@ -744,12 +744,12 @@ transform = Transform3D(1.49012e-07, 0, 1, 0, 1, 0, -1, 0, 1.49012e-07, -2.2976,
 curve = SubResource("Curve3D_2a4hm")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(-4.37108e-08, 0, -0.999986, 0, 0.999989, 0, 0.999987, 0, -4.37108e-08, -8, 0, 0)
+transform = Transform3D(-4.37102e-08, 0, -0.999972, 0, 0.999981, 0, 0.999973, 0, -4.37102e-08, -13.6, -0.1, 0.0976019)
 tilt_enabled = false
 script = ExtResource("12_ql6r4")
 
 [node name="forklift" parent="Path3D/PathFollow3D" instance=ExtResource("7_8os2f")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, -1.3, 0)
+transform = Transform3D(-1, 0, -8.74233e-08, 0, 1, 0, 8.74232e-08, 0, -1, 0.00239825, -1.2, -0.200043)
 
 [node name="forklift5" parent="." instance=ExtResource("7_8os2f")]
 transform = Transform3D(1.49012e-07, 0, 1, 0, 1, 0, -1, 0, 1.49012e-07, 50, -0.1, -41.4)
@@ -980,32 +980,32 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.5, -1, -31.5)
 
 [node name="trigger" parent="OutOfBounds" instance=ExtResource("8_nfmkb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 61, -5, -54)
-mesh = SubResource("BoxMesh_rkl02")
+mesh = SubResource("BoxMesh_glbrm")
 size = Vector3(600, 2, 600)
 
 [node name="trigger2" parent="OutOfBounds" instance=ExtResource("8_nfmkb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -80, 37, -154)
-mesh = SubResource("BoxMesh_ll1h8")
+mesh = SubResource("BoxMesh_y330i")
 size = Vector3(55, 100, 230)
 
 [node name="trigger3" parent="OutOfBounds" instance=ExtResource("8_nfmkb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -57, 37, 35)
-mesh = SubResource("BoxMesh_jktnm")
+mesh = SubResource("BoxMesh_b7dkq")
 size = Vector3(54, 100, 150)
 
 [node name="trigger6" parent="OutOfBounds" instance=ExtResource("8_nfmkb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 237, 37, -101)
-mesh = SubResource("BoxMesh_0cdb4")
+mesh = SubResource("BoxMesh_bu73r")
 size = Vector3(55, 100, 320)
 
 [node name="trigger4" parent="OutOfBounds" instance=ExtResource("8_nfmkb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 90, 37, 130)
-mesh = SubResource("BoxMesh_k6sm1")
+mesh = SubResource("BoxMesh_o7in2")
 size = Vector3(250, 100, 150)
 
 [node name="trigger5" parent="OutOfBounds" instance=ExtResource("8_nfmkb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 80, 37, -335)
-mesh = SubResource("BoxMesh_bejex")
+mesh = SubResource("BoxMesh_l817g")
 size = Vector3(300, 100, 150)
 
 [node name="track_main" parent="." instance=ExtResource("18_5tw40")]
@@ -1015,7 +1015,7 @@ script = ExtResource("19_aqi5n")
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.5, -0.851, -31.5)
 visible = false
-mesh = SubResource("ImmediateMesh_xm8jb")
+mesh = SubResource("ImmediateMesh_oqm64")
 script = ExtResource("4_h316e")
 material = ExtResource("5_6qukl")
 bezier_handle_length = 30.0
