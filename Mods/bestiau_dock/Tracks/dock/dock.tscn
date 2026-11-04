@@ -6,21 +6,21 @@
 [ext_resource type="Script" path="res://Mods/Scripts/ModRaceSettings.gd" id="2_rx4va"]
 [ext_resource type="Script" path="res://Mods/Scripts/ModCarClassSetting.gd" id="3_2napl"]
 [ext_resource type="PackedScene" uid="uid://btshuvgc5p0v0" path="res://Mods/Placeholders/mod_checkpoint.tscn" id="3_7qbpy"]
-[ext_resource type="Texture2D" uid="uid://b7y12ol3yjjk3" path="res://Mods/Placeholders/Textures/skybox.png" id="4_ca13p"]
+[ext_resource type="Texture2D" uid="uid://b7y12ol3yjjk3" path="res://Mods/bestiau_dock/Tracks/dock/Textures/skybox.png" id="4_ca13p"]
 [ext_resource type="Script" path="res://Mods/Scripts/ModTrackPath.gd" id="4_h316e"]
 [ext_resource type="Material" uid="uid://budvf3w2bjk2w" path="res://Mods/Placeholders/Materials/editor/track_path.tres" id="5_6qukl"]
 [ext_resource type="PackedScene" uid="uid://cu0mwqn0aqh5x" path="res://Mods/Placeholders/mod_track_path_point.tscn" id="6_bv4sn"]
-[ext_resource type="AudioStream" uid="uid://p46mamf6pic" path="res://Mods/Placeholders/Audio/music.ogg" id="6_f6ewq"]
-[ext_resource type="PackedScene" uid="uid://2d8pl77r0j3d" path="res://Mods/Placeholders/mod_forklift.tscn" id="7_8os2f"]
+[ext_resource type="AudioStream" uid="uid://p46mamf6pic" path="res://Mods/bestiau_dock/Tracks/dock/Audio/music.ogg" id="6_f6ewq"]
+[ext_resource type="PackedScene" uid="uid://2d8pl77r0j3d" path="res://Mods/bestiau_dock/Tracks/dock/Assets/mod_forklift.tscn" id="7_8os2f"]
 [ext_resource type="PackedScene" uid="uid://cvsxe56hnxaa0" path="res://Mods/Placeholders/mod_trigger.tscn" id="8_nfmkb"]
 [ext_resource type="PackedScene" uid="uid://cq6m734ruksda" path="res://Mods/Placeholders/mod_barrier_arrow_block.tscn" id="9_mg822"]
-[ext_resource type="PackedScene" uid="uid://y2okfw2csl8h" path="res://Mods/Placeholders/mod_barrel.tscn" id="11_vf441"]
+[ext_resource type="PackedScene" uid="uid://y2okfw2csl8h" path="res://Mods/bestiau_dock/Tracks/dock/Assets/mod_barrel.tscn" id="11_vf441"]
 [ext_resource type="Script" path="res://Mods/Scripts/ModTrackCamera.gd" id="12_oeimf"]
-[ext_resource type="Script" path="res://Mods/Scripts/ModPathFollow3D.gd" id="12_ql6r4"]
+[ext_resource type="Script" path="res://Mods/bestiau_dock/Tracks/dock/Scripts/ModPathFollow3D.gd" id="12_ql6r4"]
 [ext_resource type="PackedScene" uid="uid://dqqrq7ntnw2j8" path="res://Mods/Placeholders/mod_track_camera_previewer.tscn" id="13_fxgoo"]
-[ext_resource type="PackedScene" uid="uid://cdliq4b7kdq7t" path="res://Mods/Placeholders/Models/dock_scene.tscn" id="18_5tw40"]
-[ext_resource type="PackedScene" uid="uid://bfklfqhumlvkx" path="res://Mods/Placeholders/mod_palette.tscn" id="19_2wb1u"]
-[ext_resource type="Script" path="res://Mods/Placeholders/Models/dock_scene.gd" id="19_aqi5n"]
+[ext_resource type="PackedScene" uid="uid://cdliq4b7kdq7t" path="res://Mods/bestiau_dock/Tracks/dock/Models/dock_scene.tscn" id="18_5tw40"]
+[ext_resource type="PackedScene" uid="uid://bfklfqhumlvkx" path="res://Mods/bestiau_dock/Tracks/dock/Assets/mod_palette.tscn" id="19_2wb1u"]
+[ext_resource type="Script" path="res://Mods/bestiau_dock/Tracks/dock/Models/dock_scene.gd" id="19_aqi5n"]
 [ext_resource type="PackedScene" uid="uid://dq2fgy8jxkssy" path="res://Mods/Placeholders/mod_barrier_railing.tscn" id="19_hg5kb"]
 [ext_resource type="Script" path="res://Mods/Scripts/ModTrackIntroCamera.gd" id="19_wxr7b"]
 [ext_resource type="PackedScene" uid="uid://b80ls8gu1xpos" path="res://Mods/Placeholders/mod_spectator_car.tscn" id="20_bubvf"]
@@ -59,25 +59,25 @@ _data = {
 }
 point_count = 10
 
-[sub_resource type="BoxMesh" id="BoxMesh_rug5n"]
+[sub_resource type="BoxMesh" id="BoxMesh_h86i3"]
 size = Vector3(600, 2, 600)
 
-[sub_resource type="BoxMesh" id="BoxMesh_x7q0h"]
+[sub_resource type="BoxMesh" id="BoxMesh_h8r5s"]
 size = Vector3(55, 100, 230)
 
-[sub_resource type="BoxMesh" id="BoxMesh_vilcf"]
+[sub_resource type="BoxMesh" id="BoxMesh_0ou08"]
 size = Vector3(54, 100, 150)
 
-[sub_resource type="BoxMesh" id="BoxMesh_cse13"]
+[sub_resource type="BoxMesh" id="BoxMesh_lx03r"]
 size = Vector3(55, 100, 320)
 
-[sub_resource type="BoxMesh" id="BoxMesh_voi5x"]
+[sub_resource type="BoxMesh" id="BoxMesh_mmxer"]
 size = Vector3(250, 100, 150)
 
-[sub_resource type="BoxMesh" id="BoxMesh_xp478"]
+[sub_resource type="BoxMesh" id="BoxMesh_ac13n"]
 size = Vector3(300, 100, 150)
 
-[sub_resource type="ImmediateMesh" id="ImmediateMesh_8v8m2"]
+[sub_resource type="ImmediateMesh" id="ImmediateMesh_lj3mq"]
 
 [sub_resource type="Curve" id="Curve_lm6xc"]
 _data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
@@ -983,32 +983,32 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.5, -1, -31.5)
 
 [node name="trigger" parent="OutOfBounds" instance=ExtResource("8_nfmkb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 61, -5, -54)
-mesh = SubResource("BoxMesh_rug5n")
+mesh = SubResource("BoxMesh_h86i3")
 size = Vector3(600, 2, 600)
 
 [node name="trigger2" parent="OutOfBounds" instance=ExtResource("8_nfmkb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -80, 37, -154)
-mesh = SubResource("BoxMesh_x7q0h")
+mesh = SubResource("BoxMesh_h8r5s")
 size = Vector3(55, 100, 230)
 
 [node name="trigger3" parent="OutOfBounds" instance=ExtResource("8_nfmkb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -57, 37, 35)
-mesh = SubResource("BoxMesh_vilcf")
+mesh = SubResource("BoxMesh_0ou08")
 size = Vector3(54, 100, 150)
 
 [node name="trigger6" parent="OutOfBounds" instance=ExtResource("8_nfmkb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 237, 37, -101)
-mesh = SubResource("BoxMesh_cse13")
+mesh = SubResource("BoxMesh_lx03r")
 size = Vector3(55, 100, 320)
 
 [node name="trigger4" parent="OutOfBounds" instance=ExtResource("8_nfmkb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 90, 37, 130)
-mesh = SubResource("BoxMesh_voi5x")
+mesh = SubResource("BoxMesh_mmxer")
 size = Vector3(250, 100, 150)
 
 [node name="trigger5" parent="OutOfBounds" instance=ExtResource("8_nfmkb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 80, 37, -335)
-mesh = SubResource("BoxMesh_xp478")
+mesh = SubResource("BoxMesh_ac13n")
 size = Vector3(300, 100, 150)
 
 [node name="track_main" parent="." instance=ExtResource("18_5tw40")]
@@ -1018,7 +1018,7 @@ script = ExtResource("19_aqi5n")
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.5, -0.851, -31.5)
 visible = false
-mesh = SubResource("ImmediateMesh_8v8m2")
+mesh = SubResource("ImmediateMesh_lj3mq")
 script = ExtResource("4_h316e")
 material = ExtResource("5_6qukl")
 bezier_handle_length = 30.0

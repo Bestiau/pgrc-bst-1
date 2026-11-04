@@ -1,0 +1,106 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://daw7r31ckb5is"
+path="res://.godot/imported/dock.gltf-9ef141fcdd2e33514af11d953a210b11.scn"
+
+[deps]
+
+source_file="res://Mods/bestiau_dock/Tracks/dock/Models/dock.gltf"
+dest_files=["res://.godot/imported/dock.gltf-9ef141fcdd2e33514af11d953a210b11.scn"]
+
+[params]
+
+nodes/root_type=""
+nodes/root_name=""
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+meshes/ensure_tangents=true
+meshes/generate_lods=false
+meshes/create_shadow_meshes=false
+meshes/light_baking=0
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=true
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+import_script/path=""
+_subresources={
+"materials": {
+"barrier": {
+"use_external/enabled": true,
+"use_external/path": "res://Mods/bestiau_dock/Tracks/dock/Materials/terrain.tres"
+},
+"building": {
+"use_external/enabled": true,
+"use_external/path": "res://Mods/bestiau_dock/Tracks/dock/Materials/terrain.tres"
+},
+"container-green": {
+"use_external/enabled": true,
+"use_external/path": "res://Mods/bestiau_dock/Tracks/dock/Materials/container-green.tres"
+},
+"container-red": {
+"use_external/enabled": true,
+"use_external/path": "res://Mods/bestiau_dock/Tracks/dock/Materials/container-red.tres"
+},
+"container-yellow": {
+"use_external/enabled": true,
+"use_external/path": "res://Mods/bestiau_dock/Tracks/dock/Materials/container-yellow.tres"
+},
+"crane": {
+"use_external/enabled": true,
+"use_external/path": "res://Mods/bestiau_dock/Tracks/dock/Materials/crane.tres"
+},
+"fence": {
+"use_external/enabled": true,
+"use_external/path": "res://Mods/bestiau_dock/Tracks/dock/Materials/fence.tres"
+},
+"floor": {
+"use_external/enabled": true,
+"use_external/path": "res://Mods/bestiau_dock/Tracks/dock/Materials/terrain.tres"
+},
+"metal": {
+"use_external/enabled": true,
+"use_external/path": "res://Mods/bestiau_dock/Tracks/dock/Materials/terrain.tres"
+},
+"roof": {
+"use_external/enabled": true,
+"use_external/path": "res://Mods/bestiau_dock/Tracks/dock/Materials/roof.tres"
+},
+"ship": {
+"use_external/enabled": true,
+"use_external/path": "res://Mods/bestiau_dock/Tracks/dock/Materials/ship.tres"
+},
+"streetlight": {
+"use_external/enabled": true,
+"use_external/path": "res://Mods/bestiau_dock/Tracks/dock/Materials/streetlight.tres"
+},
+"truck": {
+"use_external/enabled": true,
+"use_external/path": "res://Mods/bestiau_dock/Tracks/dock/Materials/truck.tres"
+},
+"wall": {
+"use_external/enabled": true,
+"use_external/path": "res://Mods/bestiau_dock/Tracks/dock/Materials/terrain.tres"
+},
+"warehouse": {
+"use_external/enabled": true,
+"use_external/path": "res://Mods/bestiau_dock/Tracks/dock/Materials/warehouse.tres"
+},
+"water": {
+"use_external/enabled": true,
+"use_external/path": "res://Mods/bestiau_dock/Tracks/dock/Materials/water.tres"
+}
+},
+"nodes": {
+"PATH:container-long-green": {
+"mesh_instance/layers": 3
+}
+}
+}
+gltf/naming_version=1
+gltf/embedded_image_handling=1

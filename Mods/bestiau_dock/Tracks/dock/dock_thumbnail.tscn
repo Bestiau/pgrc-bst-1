@@ -1,9 +1,9 @@
 [gd_scene load_steps=6 format=3 uid="uid://debj0mn5tcivu"]
 
 [ext_resource type="Script" path="res://Mods/Scripts/ModTrackThumbnail.gd" id="1_xhvmg"]
-[ext_resource type="PackedScene" uid="uid://qljermfmxmrn" path="res://Mods/Placeholders/Models/forklift.gltf" id="4_xltpp"]
-[ext_resource type="PackedScene" uid="uid://y2okfw2csl8h" path="res://Mods/Placeholders/mod_barrel.tscn" id="5_70vvt"]
-[ext_resource type="PackedScene" uid="uid://6nepkki2lltv" path="res://Mods/Placeholders/Models/palette.gltf" id="7_5n70d"]
+[ext_resource type="PackedScene" uid="uid://qljermfmxmrn" path="res://Mods/bestiau_dock/Tracks/dock/Models/forklift.gltf" id="4_xltpp"]
+[ext_resource type="PackedScene" uid="uid://y2okfw2csl8h" path="res://Mods/bestiau_dock/Tracks/dock/Assets/mod_barrel.tscn" id="5_70vvt"]
+[ext_resource type="PackedScene" uid="uid://6nepkki2lltv" path="res://Mods/bestiau_dock/Tracks/dock/Models/palette.gltf" id="7_5n70d"]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_uum8v"]
 flip_faces = true
